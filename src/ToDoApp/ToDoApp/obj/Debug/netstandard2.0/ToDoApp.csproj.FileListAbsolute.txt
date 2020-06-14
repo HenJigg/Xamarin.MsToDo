@@ -1,0 +1,14 @@
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ToDoApp.AssemblyInfoInputs.cache
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ToDoApp.AssemblyInfo.cs
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ToDoApp.dll
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ref\ToDoApp.dll
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ToDoApp.pdb
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\bin\Debug\netstandard2.0\ToDoApp.deps.json
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\bin\Debug\netstandard2.0\ToDoApp.dll
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\bin\Debug\netstandard2.0\ref\ToDoApp.dll
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\bin\Debug\netstandard2.0\ToDoApp.pdb
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\View\ItemDetailPage.xaml.g.cs
+C:\Users\zhouh\Desktop\ToDoApp\ToDoApp\ToDoApp\ToDoApp\obj\Debug\netstandard2.0\ToDoApp.csprojAssemblyReference.cache

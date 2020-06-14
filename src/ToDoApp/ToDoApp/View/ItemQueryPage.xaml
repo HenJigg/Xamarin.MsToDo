@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+                   xmlns:vc="clr-namespace:ToDoApp.Converter"
+             x:Class="ToDoApp.View.ItemQueryPage">
+    <ContentPage.Resources>
+        <vc:IiconConverter x:Key="icc"/>
+        <vc:IDecorStatusConverter x:Key="isc"/>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ListView  RowHeight="40" HasUnevenRows="True" 
+                  SeparatorVisibility="None" ItemsSource="{Binding SingleChecklist.ChecklistDetails}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <SwipeView Margin="8,4,8,0">
+                            <!--<SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Left" BackgroundColor="Blue"/>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>-->
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem 
+                                            Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.DeleteCommand}"
+                                        CommandParameter="{Binding}"
+                                            Text="Remove" BackgroundColor="Red"/>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Grid VerticalOptions="Center" BackgroundColor="White" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button Text="{Binding IsDeleted,Converter={StaticResource icc},ConverterParameter='L'}" BackgroundColor="Transparent" 
+                                        Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.ExcludeCommand}"
+                                        CommandParameter="{Binding}"
+                                            TextColor="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BackgroundColor}"
+                                        FontSize="22" FontFamily="iconfont.ttf#"/>
+
+                                <StackLayout Grid.Column="1">
+                                    <Label Text="{Binding Content}"
+                                               TextDecorations="{Binding IsDeleted,Converter={StaticResource isc}}"
+                                               TextColor="Black"/>
+                                    <Label Text="任务"/>
+                                </StackLayout>
+
+                                <Button Grid.Column="2" BackgroundColor="Transparent" 
+                                         Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.KeepCommand}"
+                                        CommandParameter="{Binding}"
+                                             TextColor="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BackgroundColor}"
+                                        Text="{Binding IsFavorite,Converter={StaticResource icc},ConverterParameter='R'}" FontSize="22" FontFamily="iconfont.ttf#"/>
+                            </Grid>
+                        </SwipeView>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

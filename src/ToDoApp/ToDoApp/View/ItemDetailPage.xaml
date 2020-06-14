@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vc="clr-namespace:ToDoApp.Converter"
+             x:Class="ToDoApp.View.ItemDetailPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="重命名" Clicked="btnUpdateClick" Order="Secondary" Priority="0"/>
+        <ToolbarItem Text="删除清单" Clicked="btnDeleteClick" Order="Secondary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <vc:IiconConverter x:Key="icc"/>
+        <vc:IDecorStatusConverter x:Key="isc"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <ListView Grid.RowSpan="2"  RowHeight="40" HasUnevenRows="True" 
+                      ItemSelected="ListView_ItemSelected"
+                  SeparatorVisibility="None" ItemsSource="{Binding SingleChecklist.ChecklistDetails}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <SwipeView Margin="8,4,8,0">
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Left" BackgroundColor="Blue"/>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem 
+                                            Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.DeleteCommand}"
+                                        CommandParameter="{Binding}"
+                                            Text="Remove" BackgroundColor="Red"/>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Grid VerticalOptions="Center" BackgroundColor="White" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Button Text="{Binding IsDeleted,Converter={StaticResource icc},ConverterParameter='L'}" BackgroundColor="Transparent" 
+                                        Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.ExcludeCommand}"
+                                        CommandParameter="{Binding}"
+                                            TextColor="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BackgroundColor}"
+                                        FontSize="22" FontFamily="iconfont.ttf#"/>
+
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="{Binding Content}"
+                                               TextDecorations="{Binding IsDeleted,Converter={StaticResource isc}}"
+                                               TextColor="Black"/>
+                                        <Label Text="任务"/>
+                                    </StackLayout>
+
+                                    <Button Grid.Column="2" BackgroundColor="Transparent" 
+                                         Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.KeepCommand}"
+                                        CommandParameter="{Binding}"
+                                             TextColor="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BackgroundColor}"
+                                        Text="{Binding IsFavorite,Converter={StaticResource icc},ConverterParameter='R'}" FontSize="22" FontFamily="iconfont.ttf#"/>
+                                </Grid>
+                            </SwipeView>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout x:Name="xlayout" Grid.Row="1" Orientation="Horizontal" BackgroundColor="White">
+
+                <Button BackgroundColor="Transparent" WidthRequest="45" HorizontalOptions="Start"
+                        FontSize="24" TextColor="DarkGray" FontFamily="iconfont.ttf#" Text="&#xe80c;"/>
+
+                <Editor x:Name="xEdit" 
+                        Text="{Binding Content}"
+                        HorizontalOptions="FillAndExpand" Placeholder="添加任务"/>
+
+                <Button Command="{Binding Source={x:RelativeSource AncestorType={x:Type ContentPage}},Path=BindingContext.AddCommand}"
+                        Margin="8" TextColor="White"
+                        WidthRequest="45" HorizontalOptions="End"
+                        FontSize="20"  FontFamily="iconfont.ttf#" Text="&#xe62e;"/>
+            </StackLayout>
+
+
+            <Button x:Name="btnAdd" Grid.Row="1" Text="&#xe600;" FontFamily="iconfont.ttf#" FontSize="20"
+                    HorizontalOptions="EndAndExpand" WidthRequest="40" Margin="0,0,10,10"
+                    CornerRadius="30" BackgroundColor="#D1EEEE"
+                    />
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

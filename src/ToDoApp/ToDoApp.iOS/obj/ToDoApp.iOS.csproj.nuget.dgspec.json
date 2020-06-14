@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.iOS\\ToDoApp.iOS.csproj": {}
+  },
+  "projects": {
+    "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.iOS\\ToDoApp.iOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.iOS\\ToDoApp.iOS.csproj",
+        "projectName": "ToDoApp.iOS",
+        "projectPath": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.iOS\\ToDoApp.iOS.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.iOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {
+              "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj": {
+                "projectPath": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {
+          "dependencies": {
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.617, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
+        "projectName": "ToDoApp",
+        "projectPath": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Software\\WPF\\XmarinToDo\\MicrosoftToDo.XamarinDemo\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "MvvmLight": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "MvvmLightLibsStd10": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.5.0.530, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
